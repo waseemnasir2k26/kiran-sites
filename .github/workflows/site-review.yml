@@ -15,6 +15,17 @@ jobs:
         with:
           fetch-depth: 2
       - uses: anthropics/claude-code-action@v1
+        id: review
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "/pr-review"
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment"
+            --json-schema '{"type":"object","properties":{"verdict":{"type":"string","enum":["APPROVED","REJECTED"]},"problems":{"type":"array","items":{"type":"string"}}},"required":["verdict","problems"]}'
+      - name: Gate on the verdict
+        if: fromJSON(steps.review.outputs.structured_output).verdict != 'APPROVED'
+        env:
+          VERDICT_JSON: ${{ steps.review.outputs.structured_output }}
+        run: |
+          echo "Review verdict: $VERDICT_JSON"
+          exit 1
