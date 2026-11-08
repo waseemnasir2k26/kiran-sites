@@ -1,0 +1,11 @@
+{
+  "name": "Sufi Threads",
+  "hours": {"Mon-Sat": "11:00-21:00", "Sun": "closed"},
+  "prices": [
+    {"item": "Lawn suit", "pkr": 3600},
+    {"item": "Kurta", "pkr": 2200},
+    {"item": "Dupatta", "pkr": 1100}
+  ],
+  "phone": "+92 300 0000000",
+  "updated": "2026-11-02"
+}

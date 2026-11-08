@@ -1,0 +1,11 @@
+{
+  "name": "Mehr Bakery",
+  "hours": {"Mon-Sat": "08:00-20:00", "Sun": "10:00-14:00"},
+  "prices": [
+    {"item": "Naan khatai (box)", "pkr": 650},
+    {"item": "Rusk (pack)", "pkr": 300},
+    {"item": "Fruit cake", "pkr": 1200}
+  ],
+  "phone": "+92 300 0000000",
+  "updated": "2026-11-02"
+}

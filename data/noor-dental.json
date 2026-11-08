@@ -1,0 +1,11 @@
+{
+  "name": "Noor Dental",
+  "hours": {"Mon-Fri": "10:00-18:00", "Sat": "10:00-14:00"},
+  "prices": [
+    {"item": "Check-up", "pkr": 2000},
+    {"item": "Cleaning", "pkr": 3500},
+    {"item": "Filling", "pkr": 5000}
+  ],
+  "phone": "+92 300 0000000",
+  "updated": "2026-11-02"
+}
